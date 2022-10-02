@@ -33,7 +33,8 @@ int[] GetSumPositiveNegativeElem(int[] array)
     int sumNegative = default;      
     for (int i = 0; i < array.Length; i++)     
     {         
-        if (array[i] < 0) sumNegative += array[i]; // sumNegative = sumNegative + array[i]         else sumPositve += array[i]; // sumPositve = sumPositve + array[i];
+        if (array[i] < 0) sumNegative += array[i]; // sumNegative = sumNegative + array[i] 
+        else sumPositve += array[i]; // sumPositve = sumPositve + array[i];
     }
     return new int[] { sumPositve, sumNegative };
 }
