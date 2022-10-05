@@ -25,16 +25,15 @@ void PrintArray(int[] array)
     Console.WriteLine("]");
 }
 
-int[] InversionNum(int[] array) 
+void InversionNum(int[] array) 
 {          
     for (int i = 0; i < array.Length; i++)     
     {         
         array[i] = array[i] * (-1);
     }
-    return array;
 }
 
-int[] arr = CreateArrayRndInt(4, -8, 8); 
-PrintArray(arr); 
-int[] inversionNum = InversionNum(arr);
-PrintArray(inversionNum);
+int[] arr = CreateArrayRndInt(4, -8, 8); // исходный
+PrintArray(arr);   // печать исходного
+InversionNum(arr); // изменённый
+PrintArray(arr);   // печать изменённого
