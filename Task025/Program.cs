@@ -2,24 +2,25 @@
 // (А и В) и возводит число А в натуральную степень В.
 // Например:  3, 5 -> 243 (3 в 5 степени)     2, 4 -> 16
 
-Console.Write("Введите число А  ");
-int number1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите число B  ");
-int number2 = Convert.ToInt32(Console.ReadLine());
-int counter = 0;
+Console.Write("Введите основание степени А   ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите показатель степени B  ");
+int b = Convert.ToInt32(Console.ReadLine());
 
-double Exponentiation(int num1, int num2)
+int Exponentiation(int a, int b)
 {
-    double exponentiate = 1;
-    while (counter < num2)
+    int count = 1;
+    int res = a;
+    while (count < b)
     {
-        exponentiate = num1 * num1;
-        counter++;
+        if (count < b)
+        {
+            res = res * a;
+        }
+        count++;
     }
-    return exponentiate;
+    return res;     
 }
 
-double exponentiateResult = exponentiate(number1, number1);
-Console.WriteLine($"Возведение A {number1} в степень B {number2} = {exponentiateResult}");
-
-Math
+int result = Exponentiation(a, b);
+Console.Write($"A в натуральной степени B  = {result} ");
